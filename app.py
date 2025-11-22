@@ -616,28 +616,6 @@ def home():
     return render_template("pages/home.html", user_name=session.get("user_name"), profession=user_profession)
 
 
-# @app.route("/logout")
-# def logout():
-#     upload_folder = os.path.join(os.getcwd(), 'static', 'uploads')
-#     output_folder = os.path.join(upload_folder, 'output')
-
-#     for file_path in glob.glob(os.path.join(upload_folder, '*.jpg' , '*.jpeg', '*.png')):
-#         try:
-#             os.remove(file_path)
-#         except Exception as e:
-#             print(f"Error deleting file {file_path}: {e}")
-
-#     for file_path in glob.glob(os.path.join(output_folder, '*.jpg', '*.jpeg', '*.png')):
-#         try:
-#             os.remove(file_path)
-#         except Exception as e:
-#             print(f"Error deleting file {file_path}: {e}")
-
-#     session.clear()
-#     flash("You have been logged out.", "success")
-#     return redirect(url_for("index"))
-
-
 @app.route("/logout")
 def logout():
     upload_folder = os.path.join(os.getcwd(), 'static', 'uploads')
@@ -663,9 +641,6 @@ def logout():
     session.clear()
     flash("You have been logged out.", "success")
     return redirect(url_for("index"))
-
-
-
 
 if __name__ == "__main__":
     # For production deployment, debug should be False
