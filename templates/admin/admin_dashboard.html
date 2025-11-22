@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | DMFT</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/2.png') }}" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .btn-info{
+        width: 200px;
+        margin: 20px;
+      }
+      .btn-info:hover{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <a href="{{url_for('admin_dashboard')}}">
+              <img src="{{ url_for('static', filename='assets/icons/3.png') }}" class="navbar-img" alt="Logo" />
+            </a>
+          </div>
+          <a class="navbar-brand mx-auto" href="{{url_for('admin_dashboard')}}">DMFT</a>
+          <div class="d-flex align-items-center">
+            <a href="{{ url_for('logout') }}" style="text-decoration: none">
+              <button class="btn" type="submit">Logout</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <div>
+        <h1 class="welcome-text mt-5 ms-5">Admin Dashboard!</h1>
+        
+        <div class="d-flex justify-content-center mt-5">
+          <a href="{{url_for('admin_doctor_info')}}"><button class="btn-info btn">Doctor's Info</button></a>
+          <a href="{{url_for('admin_patient_info')}}"><button class="btn-info btn">Patient's Info</button></a>
+          <a href="{{url_for('admin_results_info')}}"><button class="btn-info btn">Results</button></a>
+        </div>
+
+      </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="p-3">
+        <div class="chatenai-separator has-position-top"></div>
+        <img
+          class="w-100 separator-dark"
+          src="{{ url_for('static', filename='assets/svgs/separator-top.svg') }}"
+          alt="separator"
+        />
+
+        <div class="footer-heading-div">
+          <div class="d-flex justify-content-center align-items-center">
+            <a href="{{url_for('admin_dashboard')}}"
+              ><img class="footer-logo" src="{{ url_for('static', filename='assets/icons/3.png') }}" alt="Logo"
+            /></a>
+            <a href="{{url_for('admin_dashboard')}}" class="footer-heading">DMFT</a>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center footer-head-para"
+          >
+            <p>
+              Your Trusted System for Comprehensive Dental Analysis and Enhanced
+              Patient Care.
+            </p>
+          </div>
+          <div class="separator-animated animated-true mt--50 mb--50"></div>
+        </div>
+      </footer>
+      <!-- End-Footer -->
+
+      <!-- Copyright Section -->
+
+      <div class="Copyright-section">
+        <div class="container text-center p-0">
+          <div class="row">
+            <div class="col">
+              <!-- <a href="">Instructions</a> -->
+            </div>
+            <div class="col">
+              <a href="{{url_for('instructions')}}">Instructions</a>
+            </div>
+            <div class="col">|</div>
+            <div class="col">
+              <a href="{{url_for('about')}}">About</a>
+            </div>
+            <div class="col">|</div>
+            <div class="col">
+              <a href="{{url_for('contact')}}">Contact</a>
+            </div>
+            <div class="col"></div>
+            <!-- <a href="">Instructions</a> -->
+          <div class="row p-2 m-0 mt-5">
+            <div class="col"></div>
+            <div class="colmt-5 copyright-div">
+              <p class="copyright-text">
+                Copyright © 2025 DMFT System. All rights reserved.
+              </p>
+          </div>
+          <div class="col"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End CopyRight Section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
