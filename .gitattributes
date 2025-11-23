@@ -1,2 +1,1 @@
-static/models/**/*.pth filter=lfs diff=lfs merge=lfs -text
 static/models/**/*.pt filter=lfs diff=lfs merge=lfs -text
